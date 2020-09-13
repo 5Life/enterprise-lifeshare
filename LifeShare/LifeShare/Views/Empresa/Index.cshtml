@@ -42,17 +42,17 @@
             @foreach (var empresa in Model)
             {
                 <tr>
-                    <td>@empresa.Codigo</td>
+                    <td>@empresa.EmpresaId</td>
                     <td>@empresa.Nome</td>
                     <td>@empresa.DataEntrada.ToShortDateString()</td>
                     <td>@empresa.Status</td>
                     <td>
-                        <a asp-action="Editar" class="btn btn-sm" asp-route-id="@empresa.Codigo">
+                        <a asp-action="Editar" class="btn btn-sm" asp-route-id="@empresa.EmpresaId">
                             <img src="~/images/edit.png"/>
                         </a>
                         <!-- Excluir um usuário -->
                         <!-- Button trigger modal -->
-                        <button onclick="usuarioId.value = @empresa.Codigo" type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal">
+                        <button onclick="usuarioId.value = @empresa.EmpresaId" type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal">
                             <img src="~/images/delete.png"/>
                         </button>
                     </td>
